@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--META-->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>EJERCICIO RESPONSIVE</title>
+
+		<!-- GOOGLE FONT -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+		<!-- CSS -->
+		<link href="style.css" type="text/css" rel="stylesheet">
+
+		<!-- ICONOS GOOGLE -->	
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			  rel="stylesheet">
+
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+		
+
+		<script>
+
+			$(document).ready(function(){
+
+				// Botón de top
+				$("#ico-menu").click(function(){
+				var body = $("html, body");
+				$("#btTop").click(function(){
+					body.animate({scrollTop:0}, 500);
+				});
+				$("#menu-header").slideToggle();
+			});
+				var body = $("html, body");
+				$("#btTop").click(function(){
+					body.animate({scrollTop:0}, 500);
+				});
+			});
+
+
+		</script>	  
+
+
+	</head>
+	<body>
+		<img src="images/menu.svg" alt="icono menu" id="ico-menu">
+
+
+		<!-- header --> 
+		<header id="header-index">
+
+
+
+			<!-- logo en header -->
+			<div id="logo-header">
+				<img src="images/PvrisLogo2.png" alt="logo">
+			</div>
+
+
+			<!-- menu prinipal -->
+			<nav id="menu-header">
+				<a href="">MERCH</a>
+				<a href="">TOURS</a>
+				<a href="">ALBUMS</a>
+				<a href="">PRE-ORDER</a>
+				<a href="">SHOWS</a>
+			</nav>
+
+
+			<!-- back de header -->
+			<div id="back-header">
+				<img src="images/PvrisBand2.0.png" alt="fondo">
+			</div>
+
+			
+
+		</header>
+
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+
+
+
+
+
+		<!-- section principal -->
+
+		<section id="section-index">
+
+			<h2>WE ARE PVRIS</h2>
+			<p>We are a band created in 2012 in massachussets with Lynn Gunn, Alex Babinski y Brian MacDonald, our purpose is to make music and for you to enjoy it. Here you will find our albums, our merch, some stuffs about us and the band and some videos. </p>
+			<a href="" class="boton">MORE</a>
+
+		</section>
+
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+
+
+
+		<!-- Entradas principales -->
+		<div id="entradas-index">
+
+			<article class="entrada">
+				<figure>
+					<a href="" class="boton plus-entrada">+</a>
+					<img src="images/awkohawnoh.jpg">
+				</figure>
+				<h5>AWKOHAWNOH</h5>
+			</article>
+
+			<article class="entrada">
+				<figure>
+					<a href="" class="boton plus-entrada">+</a>
+					<img src="images/Hallucinations.jpeg.jpg">
+				</figure>
+				<h5>HALLUCINATIONS</h5>
+
+			</article>
+
+			<article class="entrada">
+				<figure>
+					<a href="" class="boton plus-entrada">+</a>
+					<img src="images/UseMe2.jpg">
+				</figure>
+				<h5>USE ME</h5>
+			</article>
+			
+			<article class="entrada">
+				<figure>
+					<a href="" class="boton plus-entrada">+</a>
+					<img src="images/WhiteNoise.jpeg.jpg">
+				</figure>
+				<h5>WHITE NOISE</h5>
+			</article>
+
+		</div>
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+
+
+
+		<!-- noticias-index -->
+		<div id="wrap-news">
+
+			<article class="news1">
+				<figure class="wrap-img-news1">
+					<img src="images/Warner.jpg">
+				</figure>
+				<h5>Pvris release single from their new album "Use Me" </h5>
+				<p>Due to circumstances beyond our control, the release date for our new album 'Use Me' has been pushed back to July 10. </p>
+				<a href="" class="boton">+</a>
+			</article>
+
+			<article class="news">
+				<figure class="wrap-img-news">
+					<img src="images/GimmeaMinute.jpg">
+				</figure>
+				<h6>Check out our YouTube Channel</h6>
+				<p>Here you will find our Official Videos of our songs. </p>
+				<a href="" class="boton">+</a>
+			</article>
+
+			<article class="news">
+				<figure class="wrap-img-news">
+					<img src="images/Spotify.jpg">
+				</figure>
+				<h6>Sign up and stay connected</h6>
+				<p>Check us out on Spotify </p>
+				<a href="" class="boton">+</a>
+			</article>
+
+			<article class="news">
+				<figure class="wrap-img-news">
+					<img src="images/UpcomingShows.jpg">
+				</figure>
+				<h6>Upcoming Shows</h6>
+				<p>Meet and greets and tickets for our upcoming shows </p>
+				<a href="" class="boton">+</a>
+			</article>
+
+			<article class="news">
+				<figure class="wrap-img-news">
+					<img src="images/PvirsBand3.jpg">
+				</figure>
+				<h6>Pvris on screen</h6>
+				<p>Interviews, creative process and more </p>
+				<a href="" class="boton">+</a>
+			</article>
+
+
+		</div>
+
+
+
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+
+
+		<!-- Footer -->
+
+		<footer id="footer-index">
+
+			<!-- logo en footer -->
+			<div id="logo-footer">
+				<img src="images/PvrisLogo2.png" alt="LogoFooter">
+			</div>
+
+			<!-- info en footer -->
+			<ul id="info-footer">
+				<li>
+					<span class="material-icons">
+						room
+					</span>
+					<p>755 Secaucus Rd, Secaucus, NJ 07094, United States</p>
+				</li>
+				<li>
+					<span class="material-icons">
+						stay_primary_portrait
+					</span>
+					<p> +1 201-617-5704</p>
+				</li>
+			</ul>
+
+			<!-- Bt go TOP -->
+			<div id="btTop">
+				<span class="material-icons">
+					keyboard_arrow_up
+				</span>
+			</div>
+
+		</footer>
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+		<!-- ======================================= -->
+
+
+	</body>
+</html>

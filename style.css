@@ -1,0 +1,706 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*
+
+0 - UNIVERSALES
+===========================
+
+1 - TEXTOS
+===========================
+
+2- HEADER  (MENU)
+===========================
+
+3- SECTION EN INDEX
+
+===========================
+
+4- ENTRADAS INDEX
+
+===========================
+
+5- NOTICIAS
+
+===========================
+
+6- FOOTER
+
+
+*/
+
+
+/* 0 - UNIVERSALES */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* https://developer.mozilla.org/es/docs/Web/CSS/var */
+:root {
+	--uno: #424242;
+	--dos:#000000;
+	--tres:#000000;
+	--cuatro:#424242;
+	--cinco:#000000;
+}
+
+body{
+	background: var(--uno);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 100%;
+	color: white;
+	overflow-x: hidden;
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+
+/* 1 - TEXTOS */
+
+p{
+	font-weight: 400;
+	font-size: 0.8em;
+}
+
+h1{
+	font-weight: 400;
+	font-size: 3.4em;
+}
+
+h2{
+	font-weight: 500;
+	font-size: 3em;
+}
+
+h3{
+	font-weight: 500;
+	font-size: 2.6em;
+}
+h4{
+	font-weight: 500;
+	font-size: 2.2em;
+}
+h5{
+	font-weight: 500;
+	font-size: 1.8em;
+}
+h6{
+	font-weight: 500;
+	font-size: 1.4em;
+}
+
+a{
+
+}
+img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.boton{
+	display: inline-block;
+	padding: 8px 14px;
+	text-decoration: none;
+	border:1px solid white;
+	border-radius: 2px;
+	margin: 10px auto;
+	color: white;
+}
+.boton:hover{
+	background: #b90400;
+	border:1px solid #b90400;
+	transition: all linear 0.2s
+}
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+
+
+/* 2 - HEADER (MENU) */
+#ico-menu{
+	position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all linear 0.2s;
+    display: none;
+}
+
+#header-index{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	/* https://bennettfeely.com/clippy/ */
+	clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 95%, 0 0);
+}
+
+#logo-header{
+	position: absolute;
+	z-index: 2;
+	width: 420px;
+	height: 120px;
+	top:2.5vh;
+	left:50%;
+	transform: translateX(-50%);
+}
+#logo-header img{
+	position: absolute;
+	width: 420px;
+	height: auto;
+	top:5vh;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+#menu-header{
+	position: absolute;
+	z-index: 2;
+	top: 55vh;
+	width: 100%;
+	padding: 3px 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+#menu-header a{
+	display: block;
+	width: 100px;
+	height: 25px;
+	color: white;
+	font-size: 1.1em;
+	text-decoration: none;
+	text-align: center;
+	margin: 1% 3%;
+	margin-bottom: 4%;
+	border-bottom: 4px solid black;
+
+}
+#menu-header a:hover{
+	border-bottom: 4px solid #b90400;
+	color: #b90400;
+	transition: all linear 0.2s
+}
+
+#back-header{
+	position: absolute;
+	opacity: 80%;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	background:var(--dos);
+}
+
+
+/*  3- SECTION EN INDEX */
+
+#section-index{	
+	padding: 100px 0;
+	text-align: center;
+	color: white;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+#section-index p{
+	width: 600px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+
+
+/* 4- ENTRADAS INDEX */
+#entradas-index {
+	width: 100vw;
+	background: var(--tres);
+	/* https://bennettfeely.com/clippy/ */
+	clip-path: polygon(50% 0%, 100% 9%, 100% 92%, 50% 100%, 0 92%, 0 9%);
+	padding: 100px 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+.entrada{
+	display: flex;
+	flex-flow: column;
+	margin: 0 30px;
+	text-align: center;
+	text-decoration: none;	
+}
+.entrada figure{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: var(--uno);
+	margin: 0 0 20px 0;
+	position: relative;
+}
+.entrada figure img{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: var(--uno);
+	margin: 0 0 20px 0;
+	position: relative;
+}
+
+.plus-entrada{
+	position: absolute;
+	z-index: 1;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all linear 0.3s;
+}
+
+.entrada figure:hover .plus-entrada{
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+}
+
+.entrada h5{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+
+
+/* 5- NOTICIAS */
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
+#wrap-news{
+	width: 100vw;
+	align-content: center;
+	margin: 100px auto;
+	background: var(--tres);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows:  150px 150px 150px 150px;
+}
+
+.news1{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 5;
+	background: var(--dos);
+	padding: 20px;
+}
+
+.wrap-img-news{
+	width: 100%;
+	height: 50%;
+	background: var(--uno);
+	margin-bottom: 10px;
+}
+
+.wrap-img-news1{
+	width: 100%;
+	height: 70%;
+	background: var(--uno);
+	margin-bottom: 10px;
+}
+.news{
+	padding: 20px;
+	grid-column-start: auto;
+	grid-column-end: auto;
+	grid-row-start: auto;
+	grid-row-end: span 2;
+	background: var(--cinco);
+}
+
+
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+
+
+
+/* 6 - FOOTER */
+
+#footer-index {
+	background: var(--dos);
+	clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+	padding: 85px 0;
+	position: relative;
+}
+
+
+#logo-footer img{
+	width: 300px;
+	height: auto;
+	bottom: 5vh;
+	margin: 60px auto 0 auto;
+	position: relative;
+}
+
+
+#info-footer{
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+}
+
+#info-footer li{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#info-footer li:hover{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	color: #b90400;
+	transition: all linear 0.2s
+	
+}
+
+#btTop{
+	background: var(--cuatro);
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#btTop span{
+	font-size: 2em !important;
+}
+#btTop:hover{
+	background: var(--uno);
+}
+
+
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
+/************************************************RESPONSIVE******************************************************/
+
+@media screen and (max-width: 600px) {
+	
+	body{
+	width: 500px;
+	overflow-x: hidden;
+}
+	
+	/* 1 - TEXTOS */
+
+p{
+	font-weight: 400;
+	font-size: 1em;
+	text-align: center;
+}
+	
+h5 {
+	font-size: 2em;	
+	margin-bottom: 30px;
+	}
+	
+	/* 2 - HEADER (MENU) */
+	#ico-menu{
+	display: block;		
+}
+
+#header-index{
+	width: 100vw;
+	height: 60vh;
+	position: relative;
+	overflow: hidden;
+	/* https://bennettfeely.com/clippy/ */
+	clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 95%, 0 0);
+}
+	
+	
+
+
+
+#logo-header img{
+	position: absolute;
+	z-index: 2;
+	width: 300px;
+	height: auto;
+	top: 15vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#menu-header{
+	position: absolute;
+	z-index: 2;
+	top: 0vh;
+	background: var(--dos);
+	width: 100%;
+	height: 60vh;
+	padding: 3px 0;
+	display: none;
+	flex-flow: column;
+	justify-content: center;
+	opacity: 70%;
+}
+
+	h2{
+		text-align: center;
+		align-content: center;
+	}
+
+#menu-header a{
+	display: block;
+	width: 200px;
+	height: 40px;
+	margin-top: 25px;
+	margin-bottom: 19px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	
+}
+
+#back-header{
+	position: absolute;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh; 
+	background:var(--dos);
+}
+	
+	/*  3- SECTION EN INDEX */
+
+#section-index{	
+	padding: 100px 0;
+	text-align: center;
+	color: white;
+	top: 35vh;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	align-content: center;
+	width: 100vw;
+}
+#section-index p{
+	width: 100vw;
+	margin: 30px auto;
+	text-align: center;
+	align-content: center;
+}
+	/* 4- ENTRADAS INDEX */
+#entradas-index {
+	
+	flex-flow: column;
+
+}
+
+.entrada{
+	display: flex;
+	flex-flow: column;
+	margin: 0 30px;
+	text-align: center;
+	text-decoration: none;	
+}
+.entrada figure{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: var(--uno);
+	margin: 0 0 20px 0;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	
+}
+
+.plus-entrada{
+	position: absolute;
+	z-index: 1;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all linear 0.3s;
+}
+
+.entrada figure:hover .plus-entrada{
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+}
+
+.entrada h5{
+	text-decoration: none;
+	color: white;
+}
+
+	
+
+/* 5- NOTICIAS */
+
+#wrap-news{
+	width: 100vw;
+	align-content: center;
+	margin: 100px auto;
+	background: var(--tres);
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows:  150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px;
+}
+
+.news1{
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 5;
+	background: var(--dos);
+	padding: 20px;
+}
+
+.wrap-img-news{
+	width: 100%;
+	height: 50%;
+	background: var(--uno);
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.wrap-img-news1{
+	width: 100%;
+	height: 70%;
+	background: var(--uno);
+	margin-bottom: 10px;
+}
+.news{
+	padding: 20px;
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start: auto;
+	grid-row-end: span 3;
+	background: var(--cinco);
+}
+
+	/* 6 - FOOTER */
+
+#footer-index {
+	width: 100vw;
+	background: var(--dos);
+	clip-path: polygon(50% 20%, 100% 0, 100% 100%, 0 100%, 0 0);
+	padding: 85px 0;
+	position: relative;
+}
+	
+
+#logo-footer{
+	width: 100px;
+	margin: 60px auto 0 auto;
+	position: relative;
+}
+#logo-footer img{
+	width: 120px;
+	height: auto;
+	bottom: 5vh;
+	margin: 60px auto 0 auto;
+	position: relative;
+	
+}
+
+
+#info-footer{
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+}
+
+#info-footer li{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#btTop{
+	background: var(--cuatro);
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#btTop span{
+	font-size: 2em !important;
+}
+#btTop:hover{
+	background: var(--uno);
+}
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================================================================ */
+/* ============================================================================================================ */
